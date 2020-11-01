@@ -19,8 +19,12 @@ class Pocket {
 
 		if (!empty($_SESSION['request_token']))
 			$this->request_token = $_SESSION['request_token'];
+
 		if (!empty($_SESSION['access_token']))
 			$this->access_token = $_SESSION['access_token'];
+		elseif (!empty($_COOKIE['pocket_access_token']))
+			$this->access_token = $_COOKIE['pocket_access_token'];
+
 		if (!empty($_SESSION['username']))
 			$this->username = $_SESSION['username'];
 	}
@@ -180,6 +184,7 @@ class Pocket {
 	public function setAccessToken($token) {
 		$this->access_token = $token;
 		$_SESSION['access_token'] = $token;
+		setcookie('pocket_access_token', $token, time() + 365 * 24 * 3600);
 	}
 
 	public function setUsername($value) {
