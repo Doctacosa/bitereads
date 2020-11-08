@@ -108,7 +108,7 @@ foreach($full_data['list'] as $item_data) {
 		$details[] = $item_data['word_count'].' words';
 
 	echo '<article id="item_'.$item_data['item_id'].'" style="'.$image.'">
-		<img src="https://'.parse_url($item_data['given_url'], PHP_URL_HOST).'/favicon.ico" alt="" onerror="this.src=\'images/empty.png\'" class="small" />
+		<img src="https://www.interordi.com/tools/favicon/get/'.parse_url($item_data['given_url'], PHP_URL_HOST).'" alt="" onerror="this.src=\'images/empty.png\'" class="small" />
 		<a href="'.$item_data['given_url'].'" class="url">'.$item_data['resolved_title'].'</a>
 		<div class="text">
 			'.implode('<br />', $details).'
