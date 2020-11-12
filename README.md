@@ -1,6 +1,6 @@
-# Pocket^2
+# BiteReads
 
-Pocket^2 ("Pocket Squared"), a frontend to Pocket. This much smaller interface makes it more usable on small phone displays and browser sidebars.
+BiteReads, a frontend to Pocket. This much smaller interface makes it more usable on small phone displays and browser windows.
 
 ## Configuration
 
