@@ -17,7 +17,7 @@ if (isset($_GET['action'])) {
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>Pocket^2</title>
+	<title>BiteReads</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -35,7 +35,7 @@ if (isset($_GET['action'])) {
 <body>
 
 <div id="header">
-	<h1>Pocket^2</h1>
+	<h1>BiteReads - A smaller Pocket</h1>
 	<span><?=$pocket->getUsername()?></span>
 	<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
 </div>
