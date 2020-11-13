@@ -99,6 +99,9 @@ foreach($full_data['list'] as $item_data) {
 		//Nothing found using sizes, fallback to the first one
 		if (empty($image_data))
 			$image_data = array_slice($item_data['images'], 0, 1)[0];
+		//Require HTTPS
+		if (substr($image_data['src'], 0, 7) == 'http://')
+			$image_data['src'] = 'https://'.substr($image_data['src'], 7);
 		$image = 'background-image: url(\''.$image_data['src'].'\')';
 	}
 
