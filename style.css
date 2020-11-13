@@ -55,19 +55,46 @@ body {
 }
 
 #header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	position: relative;
 	background-color: #000;
 	margin-bottom: 10px;
 	color: #EEE;
+	height: 58px;
+}
+
+#header img.logo {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 48px;
+	height: 48px;
 }
 
 #header h1 {
+	position: absolute;
+	left: 60px;
+	top: 5px;
 	margin: 0px;
 	color: #EEE;
 	padding: 5px;
 	font-size: 16pt;
+}
+
+#header h2 {
+	position: absolute;
+	left: 60px;
+	top: 28px;
+	margin: 0px;
+	color: #AAA;
+	font-style: italic;
+	padding: 5px;
+	font-size: 10pt;
+}
+
+#header .toolbar {
+	position: absolute;
+	right: 5px;
+	top: 5px;
 }
 
 .button {

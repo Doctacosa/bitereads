@@ -35,9 +35,13 @@ if (isset($_GET['action'])) {
 <body>
 
 <div id="header">
-	<h1>BiteReads - A smaller Pocket</h1>
+	<img src="images/logo.png" alt="" class="logo" />
+	<h1>BiteReads</h1>
+	<h2>A smaller Pocket</h2>
 	<span><?=$pocket->getUsername()?></span>
-	<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
+	<div class="toolbar">
+		<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
+	</div>
 </div>
 
 <?php
