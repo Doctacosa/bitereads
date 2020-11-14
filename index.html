@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BiteReads</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<style>
+		@import "//www.interordi.com/files/css/normalize.css";
+		@import "//www.interordi.com/files/css/base.css";
+		@import "style.css";
+	</style>
+
+	<script src="js.js"></script>
+</head>
+
+<body>
+
+<div id="header">
+	<img src="images/logo.png" alt="" class="logo" />
+	<h1>BiteReads</h1>
+	<h2>A smaller Pocket</h2>
+	<span id="username"></span>
+	<div class="toolbar">
+		<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
+	</div>
+</div>
+
+
+<div id="content"></div>
+
+<script>
+	getList()
+</script>
+
+</body>
+</html>
