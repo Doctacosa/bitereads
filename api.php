@@ -51,6 +51,8 @@ elseif ($action == 'auth') {
 		die();
 	}
 
+	$articles = [];
+
 	foreach($full_data['list'] as $item_data) {
 		//if ($item_data['status'] != 0)
 		//	continue;
@@ -82,16 +84,15 @@ elseif ($action == 'auth') {
 		if ($item_data['word_count'] > 0)
 			$details[] = $item_data['word_count'].' words';
 
-		echo '<article id="item_'.$item_data['item_id'].'" style="'.$image.'">
-			<img src="https://www.interordi.com/tools/favicon/get/'.parse_url($item_data['given_url'], PHP_URL_HOST).'" alt="" onerror="this.src=\'images/empty.png\'" class="small" />
-			<a href="'.$item_data['given_url'].'" class="url">'.$item_data['resolved_title'].'</a>
-			<div class="text">
-				'.implode('<br />', $details).'
-			</div>
-			<div class="actions">
-				<a href="javascript:read('.$item_data['item_id'].')"><img src="images/glyphicons-basic-844-square-check.svg" alt="Read" /></a>
-				<a href="javascript:remove('.$item_data['item_id'].')"><img src="images/glyphicons-basic-843-square-remove.svg" alt="Delete" /></a>
-			</div>
-		</article>';
+		$articles[] = [
+			'id' => $item_data['item_id'],
+			'image' => $image,
+			'domain' => parse_url($item_data['given_url'], PHP_URL_HOST),
+			'details' => implode('<br />', $details),
+			'url' => $item_data['given_url'],
+			'title' => $item_data['resolved_title'],
+		];
 	}
+
+	echo json_encode($articles);
 }
