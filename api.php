@@ -41,13 +41,17 @@ elseif ($action == 'auth') {
 	</script>';
 	die();
 
+} elseif ($action == 'logout') {
+	setcookie('pocket_access_token', '', time() - 1);
+	$_SESSION = [];
+	session_destroy();
+	echo json_encode(['result' => true]);
+
 } else {
 	$get_raw = $pocket->get();
 	$full_data = json_decode($get_raw, true);
 	if ($full_data == null) {
-		echo '<script>
-			window.location = "api.php?action=auth";
-		</script>';
+		echo json_encode(['result' => 'must_login']);
 		die();
 	}
 

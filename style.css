@@ -98,8 +98,8 @@ body {
 }
 
 .button {
-	width: 28px;
-	height: 28px;
-	padding: 4px;
+	width: 24px;
+	height: 24px;
+	margin: 4px;
 	cursor: pointer;
 }

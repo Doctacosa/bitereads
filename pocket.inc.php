@@ -36,7 +36,7 @@ class Pocket {
 		$url = 'https://getpocket.com/v3/oauth/request';
 		$options['post'] = [
 			'consumer_key' => $this->consumer_key,
-			'redirect_uri' => $this->path.'?action=auth_return',
+			'redirect_uri' => $this->path.'api.php?action=auth_return',
 			'state' => '',
 		];
 		$options['headers'] = [
@@ -50,7 +50,7 @@ class Pocket {
 
 	//Send the user to Pocket's auth page
 	public function authLogin() {
-		$url = 'https://getpocket.com/auth/authorize?request_token='.$this->request_token.'&redirect_uri='.urlencode($this->path.'?action=login_return');
+		$url = 'https://getpocket.com/auth/authorize?request_token='.$this->request_token.'&redirect_uri='.urlencode($this->path.'api.php?action=login_return');
 		header('Location: '.$url);
 	}
 
