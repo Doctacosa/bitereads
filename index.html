@@ -19,6 +19,14 @@
 		@import "style.css";
 	</style>
 
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+
+	<script src="pwabuilder-sw.js"></script>
 	<script src="js.js"></script>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
