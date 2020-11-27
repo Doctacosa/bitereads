@@ -7,7 +7,6 @@ article {
 	background-size: contain;
 	background-position: right;
 	padding: 3px 6px;
-	word-break: break-all;
 }
 
 article a.url, article img, article .text {
@@ -31,6 +30,7 @@ article .text {
 	grid-column-start: 2;
 	font-size: 90%;
 	color: #555;
+	word-break: break-all;
 }
 
 article .actions {
@@ -48,6 +48,28 @@ article .actions img {
 	article img {
 		max-width: 100px;
 		height: 50px;
+	}
+}
+
+@media all and (min-width: 601px) {
+	#content {
+		text-align: center;
+	}
+	
+	article {
+		text-align: left;
+		display: inline-grid;
+		width: 450px;
+		height: 85px;
+		border: 1px dotted #AAA;
+		border-radius: 10px;
+		margin: 5px;
+		overflow: hidden;
+	}
+
+	article img {
+		max-width: 100px;
+		height: 85px;
 	}
 }
 
