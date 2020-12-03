@@ -54,6 +54,27 @@ function remove(id) {
 }
 
 
+//Add a page
+function addAction() {
+	let url = prompt('Enter the URL of a page to add');
+	if (url == null || url == '')
+		return;
+
+	var target = document.getElementById('content');
+	if (target)	target.classList.add('loading');
+	fetch('api.php?action=add&url=' + url)
+		.then(function(data) {
+			data.json().then(res => {
+				//FIXME: Insert the item directly instead of refreshing
+				getList();
+			});
+		})
+		.catch(error => {
+			console.log('Error:' + error)
+		});
+}
+
+
 //Execute an action
 function executeAction(id, action) {
 	var target = document.getElementById("item_" + id);

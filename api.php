@@ -16,6 +16,11 @@ if ($action == 'archive' || $action == 'delete') {
 	die();
 }
 
+elseif ($action == 'add') {
+	echo $pocket->add($_GET['url']);
+	die();
+}
+
 elseif ($action == 'auth') {
 	$result = $pocket->authRequestToken();
 

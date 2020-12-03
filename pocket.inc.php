@@ -102,6 +102,19 @@ class Pocket {
 	}
 
 
+	//Add an URL
+	public function add($url_page) {
+		$options = [];
+		$url = 'https://getpocket.com/v3/add';
+		$options['post'] = [
+			'url' => $url_page,
+			'access_token' => $this->access_token,
+			'consumer_key' => $this->consumer_key,
+		];
+		return $this->getRemotePage($url, $options);
+	}
+
+
 	//Perform an action on the selected item
 	public function executeAction($id, $action) {
 		$options = [];
