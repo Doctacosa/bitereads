@@ -56,10 +56,14 @@ function remove(id) {
 
 //Execute an action
 function executeAction(id, action) {
+	var target = document.getElementById("item_" + id);
+	if (target)	target.classList.add('loading');
 	fetch('api.php?action=' + action + '&id=' + id)
 		.then(function(data) {
 			data.json().then(res => {
-				document.getElementById("item_" + id).remove();
+				target.remove();
+
+				if (target)	target.classList.remove('loading');
 			});
 		})
 		.catch(error => {

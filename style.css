@@ -126,3 +126,9 @@ body {
 	margin: 4px;
 	cursor: pointer;
 }
+
+.loading {
+	opacity: 0.5;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
