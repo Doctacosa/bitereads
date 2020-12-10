@@ -132,3 +132,45 @@ body {
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
+
+
+#about {
+	margin: 10px;
+	text-align: center;
+	font-size: 130%;
+}
+
+#about img {
+	max-width: 40%;
+	border: 1px solid black;
+}
+
+#about .compare {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.copyright {
+	font-size: 80%;
+	color: #0008;
+}
+
+.main_action {
+	display: inline-block;
+	margin: 10px;
+	padding: 15px;
+	background-color: #338833;
+	font-weight: bold;
+	color: #FFF !important;
+}
+
+@media all and (max-width: 600px) {
+	#about .compare {
+		display: block;
+	}
+
+	#about img {
+		max-width: 80%;
+	}
+}

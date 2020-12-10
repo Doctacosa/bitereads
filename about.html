@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About - BiteReads</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="description" content="About BiteReads, a smaller pocket.">
+	<meta name="theme-color" content="#000000">
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+	<link rel="Shortcut Icon" href="favicon.ico" />
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+
+	<link rel="manifest" href="/manifest.json">
+
+	<style>
+		@import "//www.interordi.com/files/css/normalize.css";
+		@import "//www.interordi.com/files/css/base.css";
+		@import "style.css";
+	</style>
+
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+
+	<script src="pwabuilder-sw.js"></script>
+	<script src="js.js"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+
+<div id="header">
+	<img src="images/logo.svg" alt="" class="logo" />
+	<h1>BiteReads</h1>
+	<h2>A smaller Pocket</h2>
+	<!--span id="username"></span>
+	<div class="toolbar">
+		<img src="images/glyphicons-basic-841-square-plus.svg" alt="Add" onclick="addAction()" class="button" />
+		<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
+		<img src="images/glyphicons-basic-432-log-out.svg" alt="Logout" onclick="logout()" class="button" />
+	</div-->
+</div>
+
+<div id="about">
+
+	<p>BiteReads, a more compact view for your Pocket notes!</p>
+
+	<a href="api.php?action=auth" class="main_action">Login to Pocket</a>
+	
+	<p>All the standard functionality, in a smaller package to view more of your stories at a glance.</p>
+
+	<h3>Web view</h3>
+
+	<div class="compare">
+		<img src="images/pocket_web.png" alt="Pocket Web" />
+		<img src="images/bitereads_web.png" alt="BiteReads Web" />
+	</div>
+
+	<h3>Mobile view</h3>
+
+	<div class="compare">
+		<img src="images/pocket_mobile.png" alt="Pocket Mobile" />
+		<img src="images/bitereads_mobile.png" alt="BiteReads Mobile" />
+	</div>
+
+	<p class="copyright">Pocket © Read It Later, Inc</p>
+
+</div>
+
+
+</body>
+</html>
