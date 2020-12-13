@@ -8,7 +8,7 @@ function getList() {
 			data.json().then(res => {
 
 				if (res.result == 'must_login') {
-					target.innerHTML = '<a href="api.php?action=auth">Please login</a>';
+					window.location = 'about.html';
 				} else {
 					articles = '';
 					for (var i in res) {

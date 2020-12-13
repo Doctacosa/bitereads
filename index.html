@@ -41,11 +41,14 @@
 <body>
 
 <div id="header">
-	<img src="images/logo.svg" alt="" class="logo" />
-	<h1>BiteReads</h1>
-	<h2>A smaller Pocket</h2>
+	<a href="index.html">
+		<img src="images/logo.svg" alt="" class="logo" />
+		<h1>BiteReads</h1>
+		<h2>A smaller Pocket</h2>
+	</a>
 	<span id="username"></span>
 	<div class="toolbar">
+		<img src="images/glyphicons-basic-846-square-info.svg" alt="About" onclick="window.location = 'about.html'" class="button" />
 		<img src="images/glyphicons-basic-841-square-plus.svg" alt="Add" onclick="addAction()" class="button" />
 		<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
 		<img src="images/glyphicons-basic-432-log-out.svg" alt="Logout" onclick="logout()" class="button" />
