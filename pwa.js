@@ -8,6 +8,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 	deferredPrompt = e;
 
 	document.getElementById("install").style.display = 'inline';
+	document.querySelectorAll('.not_installed').forEach(function(node) {
+		node.style.display = 'inline';
+	});
 });
 
 async function install() {

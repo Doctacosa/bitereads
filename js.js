@@ -111,3 +111,44 @@ function logout() {
 		})
 		.catch(error => console.log('Error:' + error));
 }
+
+
+//Offer the user an action to do
+function getAboutActions() {
+	let action = '';
+	if (getCookie('pocket_access_token') != '')
+		action = '<a href="." class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> View your notes</a>';
+	else
+		action = '<a href="api.php?action=auth" class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> Login to Pocket</a>';
+
+	action += '<a href="javascript:install()" class="main_action not_installed"><img src="images/glyphicons-basic-302-square-download.svg" /> Install app</a>';
+
+	document.getElementById('about_action').innerHTML = action;
+}
+
+
+//Set a cookie
+function getCookie(cookieName) {
+	let name = cookieName + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+
+//Get a cookie
+function setCookie(cookieName, cookieName, expirationDays) {
+	let d = new Date();
+	d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	document.cookie = cookieName + "=" + cookieName + ";" + expires + ";path=/";
+}

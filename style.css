@@ -211,3 +211,7 @@ body {
 #install, #notifications {
 	display: none;
 }
+
+.not_installed {
+	display: none;
+}
