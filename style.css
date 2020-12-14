@@ -206,3 +206,8 @@ body {
 		margin-right: auto;
 	}
 }
+
+/* PWA */
+#install, #notifications {
+	display: none;
+}
