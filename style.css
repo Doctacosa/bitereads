@@ -1,3 +1,13 @@
+
+a {
+	transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+	text-decoration: none;
+	filter: brightness(120%);
+}
+
 article {
 	border-bottom: 1px dotted #AAA;
 	display: grid;
@@ -207,7 +217,31 @@ body {
 	}
 }
 
-/* PWA */
+
+#image_viewer {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 0%;
+	height: 0%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 999;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+#image_viewer img {
+	max-width: 98%;
+	max-height: 98%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/*** PWA ***/
+
 #install, #notifications {
 	display: none;
 }

@@ -41,6 +41,8 @@
 
 <body>
 
+<div id="image_viewer" onclick="closeImage()"><img src="images/empty.png" alt="Image" /></div>
+
 <div id="header">
 	<a href="index.html">
 		<img src="images/logo.svg" alt="" class="logo" />
@@ -68,11 +70,11 @@
 
 	<div class="compare">
 		<div class="preview">
-			<img src="images/bitereads_web.png" alt="BiteReads Web" />
+			<a href="javascript:viewImage('images/bitereads_web.png')"><img src="images/bitereads_web.png" alt="BiteReads Web" /></a>
 			<label>BiteReads&nbsp;- 18+&nbsp;pages&nbsp;visible</label>
 		</div>
 		<div class="preview">
-			<img src="images/pocket_web.png" alt="Pocket Web" />
+			<a href="javascript:viewImage('images/pocket_web.png')"><img src="images/pocket_web.png" alt="Pocket Web" /></a>
 			<label>Pocket&nbsp;- 6&nbsp;pages&nbsp;visible</label>
 		</div>
 	</div>
@@ -81,11 +83,11 @@
 
 	<div class="compare">
 		<div class="preview">
-			<img src="images/bitereads_mobile.png" alt="BiteReads Mobile" />
+			<a href="javascript:viewImage('images/bitereads_mobile.png')"><img src="images/bitereads_mobile.png" alt="BiteReads Mobile" /></a>
 			<label>BiteReads&nbsp;- 10+&nbsp;pages&nbsp;visible</label>
 		</div>
 		<div class="preview">
-			<img src="images/pocket_mobile.png" alt="Pocket Mobile" />
+			<a href="javascript:viewImage('images/pocket_mobile.png')"><img src="images/pocket_mobile.png" alt="Pocket Mobile" /></a>
 			<label>Pocket&nbsp;- 1.5&nbsp;pages&nbsp;visible</label>
 		</div>
 	</div>

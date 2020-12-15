@@ -127,6 +127,9 @@ function getAboutActions() {
 }
 
 
+
+/*** Common ***/
+
 //Set a cookie
 function getCookie(cookieName) {
 	let name = cookieName + "=";
@@ -151,4 +154,23 @@ function setCookie(cookieName, cookieName, expirationDays) {
 	d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
 	let expires = "expires=" + d.toUTCString();
 	document.cookie = cookieName + "=" + cookieName + ";" + expires + ";path=/";
+}
+
+
+//Overlay an image
+function viewImage(file) {
+	var target = document.getElementById('image_viewer');
+	target.querySelector('img').src = file;
+	target.style.left = '0px';
+	target.style.top = '0px';
+	target.style.width = '100%';
+	target.style.height = '100%';
+}
+
+function closeImage() {
+	var target = document.getElementById('image_viewer');
+	target.style.left = '50%';
+	target.style.top = '50%';
+	target.style.width = '0%';
+	target.style.height = '0%';
 }
