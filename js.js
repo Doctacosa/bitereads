@@ -1,9 +1,11 @@
 
+let pos = 0;
+
 //Get the list of saved pages
 function getList() {
 	var target = document.getElementById('content');
 	if (target)	target.classList.add('loading');
-	fetch('api.php?action=get')
+	fetch('api.php?action=get&start_at=' + pos)
 		.then(function(data) {
 			data.json().then(res => {
 
@@ -30,13 +32,22 @@ function getList() {
 							'	</div>' +
 							'</article>';
 					}
-					target.innerHTML = articles;
+					if (pos == 0)
+						target.innerHTML = articles;
+					else
+						target.innerHTML += articles;
 				}
 
 				if (target)	target.classList.remove('loading');
 			});
 		})
 		.catch(error => console.log('Error:' + error));
+}
+
+
+function loadMore() {
+	pos += 30;
+	getList(pos);
 }
 
 

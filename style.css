@@ -186,6 +186,11 @@ body {
 	line-height: 1.5;
 }
 
+.actions {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .main_action {
 	display: inline-block;
 	margin: 10px;

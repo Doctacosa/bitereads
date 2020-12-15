@@ -73,7 +73,7 @@ class Pocket {
 
 
 	//Get a list of entries
-	public function get() {
+	public function get($start_at = 0) {
 		$options = [];
 		$url = 'https://getpocket.com/v3/get';
 		$options['post'] = [
@@ -81,6 +81,7 @@ class Pocket {
 			'access_token' => $this->access_token,
 			'detailType' => 'complete',
 			'count' => '30',
+			'offset' => $start_at,
 		];
 		$options['headers'] = [
 			'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF8',

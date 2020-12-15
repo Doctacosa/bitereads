@@ -9,6 +9,7 @@ if (empty($_GET['action']))
 	die();
 
 $action = $_GET['action'];
+$start_at = (isset($_GET['start_at'])) ? intval($_GET['start_at']) : 0;
 
 
 if ($action == 'archive' || $action == 'delete') {
@@ -53,7 +54,7 @@ elseif ($action == 'auth') {
 	echo json_encode(['result' => true]);
 
 } else {
-	$get_raw = $pocket->get();
+	$get_raw = $pocket->get($start_at);
 	$full_data = json_decode($get_raw, true);
 	if ($full_data == null) {
 		echo json_encode(['result' => 'must_login']);
