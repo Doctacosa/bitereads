@@ -1,6 +1,6 @@
 # BiteReads
 
-BiteReads, a frontend to Pocket. This much smaller interface makes it more usable on small phone displays and browser windows.
+BiteReads, a frontend to Pocket. This much smaller interface makes it more usable on small phone displays and browser windows. [Visit the live version](https://bitereads.interordi.com/)!
 
 ## Configuration
 
