@@ -27,8 +27,8 @@ function getList() {
 							'		' + article.details + '' +
 							'	</div>' +
 							'	<div class="actions">' +
-							'		<a href="javascript:read(' + article.id + ')"><img src="images/glyphicons-basic-844-square-check.svg" alt="' + getText("action_read") + '" /></a>' +
-							'		<a href="javascript:remove(' + article.id + ')"><img src="images/glyphicons-basic-843-square-remove.svg" alt="' + getText("action_delete") + '" /></a>' +
+							'		<a href="javascript:read(' + article.id + ')"><img src="images/glyphicons-basic-844-square-check.svg" alt="Read" /></a>' +
+							'		<a href="javascript:remove(' + article.id + ')"><img src="images/glyphicons-basic-843-square-remove.svg" alt="Delete" /></a>' +
 							'	</div>' +
 							'</article>';
 					}
@@ -36,6 +36,8 @@ function getList() {
 						target.innerHTML = articles;
 					else
 						target.innerHTML += articles;
+					
+					localize();
 				}
 
 				if (target)	target.classList.remove('loading');
@@ -67,7 +69,7 @@ function remove(id) {
 
 //Add a page
 function addAction() {
-	let url = prompt("dialog_add_url");
+	let url = prompt(getText("dialog_add_url"));
 	if (url == null || url == '')
 		return;
 
@@ -128,25 +130,43 @@ function logout() {
 function getAboutActions() {
 	let action = '';
 	if (getCookie('pocket_access_token') != '')
-		action = '<a href="." class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> ' + getText('about_view_notes') + '</a>';
+		action = '<a href="." class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> <span class="loc">about_view_notes</span></a>';
 	else
-		action = '<a href="api.php?action=auth" class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> ' + getText('about_login_pocket') + '</a>';
+		action = '<a href="api.php?action=auth" class="main_action"><img src="images/glyphicons-basic-431-log-in.svg" /> <span class="loc">about_login_pocket</span></a>';
 
-	action += '<a href="javascript:install()" class="main_action not_installed"><img src="images/glyphicons-basic-302-square-download.svg" /> ' + getText('about_install_app') + '</a>';
+	action += '<a href="javascript:install()" class="main_action not_installed"><img src="images/glyphicons-basic-302-square-download.svg" /> <span class="loc">about_install_app</span></a>';
 
 	document.getElementById('about_action').innerHTML = action;
 }
 
 
+//Detect the user's language and load the text
+function setLanguage() {
+	let lang = "fr";
+
+	//Load the texts file
+	fetch("text/" + lang + ".json")
+		.then(function(data) {
+			data.json().then(res => {
+				texts = res;
+				localize();
+			});
+		});
+}
+
 //Localize all the text that needs it
 function localize() {
 	document.querySelectorAll(".loc").forEach(function(elem) {
 		elem.innerHTML = getText(elem.innerHTML);
+		elem.classList.remove("loc");
 	});
 }
 
 function getText(id) {
-	var text = "";
+	if (typeof texts == "undefined")
+		texts = {};
+
+	let text = "";
 	if (typeof texts[id] != "undefined")
 		text = texts[id];
 	else
