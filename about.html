@@ -31,6 +31,7 @@
 
 	<script src="pwa.js"></script>
 	<script src="pwabuilder-sw.js"></script>
+	<script src="text/en.js"></script>
 	<script src="js.js"></script>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
@@ -47,7 +48,7 @@
 	<a href="index.html">
 		<img src="images/logo.svg" alt="" class="logo" />
 		<h1>BiteReads</h1>
-		<h2>A smaller Pocket</h2>
+		<h2 class="loc">tagline</h2>
 	</a>
 	<!--span id="username"></span!-->
 	<div class="toolbar">
@@ -60,41 +61,37 @@
 
 <div id="about">
 
-	<p>BiteReads, a more compact view for your <a href="https://getpocket.com">Pocket</a> notes!</p>
+	<p class="loc">about_opening</p>
 
 	<div id="about_action"></div>
 	
-	<p>All the standard functionality, in a smaller package, to view more of your stories at a glance.</p>
+	<p class="loc">about_summary</p>
 
-	<p>
-		&rarr; No registration, login and go!<br />
-		&rarr; Install or use from your browser!<br />
-		&rarr; Quick and light!<br />
-	</p>
+	<p class="loc">about_bulletpoints</p>
 
-	<h3>Web view</h3>
+	<h3 class="loc">about_web_view</h3>
 
 	<div class="compare">
 		<div class="preview">
 			<a href="javascript:viewImage('images/bitereads_web.png')"><img src="images/bitereads_web.png" alt="BiteReads Web" /></a>
-			<label>BiteReads&nbsp;- 18+&nbsp;pages&nbsp;visible</label>
+			<label class="loc">about_preview_web_br</label>
 		</div>
 		<div class="preview">
 			<a href="javascript:viewImage('images/pocket_web.png')"><img src="images/pocket_web.png" alt="Pocket Web" /></a>
-			<label>Pocket&nbsp;- 6&nbsp;pages&nbsp;visible</label>
+			<label class="loc">about_preview_web_pocket</label>
 		</div>
 	</div>
 
-	<h3>Mobile view</h3>
+	<h3 class="loc">about_mobile_view</h3>
 
 	<div class="compare">
 		<div class="preview">
 			<a href="javascript:viewImage('images/bitereads_mobile.png')"><img src="images/bitereads_mobile.png" alt="BiteReads Mobile" /></a>
-			<label>BiteReads&nbsp;- 10+&nbsp;pages&nbsp;visible</label>
+			<label class="loc">about_preview_mobile_br</label>
 		</div>
 		<div class="preview">
 			<a href="javascript:viewImage('images/pocket_mobile.png')"><img src="images/pocket_mobile.png" alt="Pocket Mobile" /></a>
-			<label>Pocket&nbsp;- 1.5&nbsp;pages&nbsp;visible</label>
+			<label class="loc">about_preview_mobile_pocket</label>
 		</div>
 	</div>
 
@@ -109,6 +106,7 @@
 </div>
 
 <script>
+	localize();
 	getAboutActions();
 </script>
 
