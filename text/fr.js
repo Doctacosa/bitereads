@@ -1,0 +1,25 @@
+var texts = {
+	"tagline": "Un Pocket compact",
+	"action_load_more": "Plus de notes",
+
+	"action_read": "Lire",
+	"action_delete": "Supprimer",
+	
+	"dialog_delete": "Êtes-vous sûr de vouloir supprimer cette page?",
+	"dialog_add_url": "Entrez l'adresse d'une page à ajouter.",
+
+	"about_opening": "BiteReads, une interface plus compacte pour vos notes <a href=\"https://getpocket.com\">Pocket</a>!",
+	"about_summary": "Toute la fonctionnalité standard, dans un ensemble plus compact, pour voir plus de vos notes d'un seul coup d'oeil.",
+	"about_bulletpoints": "	&rarr; Pas d'inscription, seulement une connexion!<br />&rarr; Installez ou utilisez depuis votre navigateur!<br />&rarr; Léger et rapide!<br />",
+
+	"about_view_notes": "Voir vos notes",
+	"about_login_pocket": "Connexion à Pocket",
+	"about_install_app": "Installer app",
+
+	"about_web_view": "Vue web",
+	"about_mobile_view": "Vue mobile",
+	"about_preview_web_br": "BiteReads&nbsp;- 18+&nbsp;pages&nbsp;visibles",
+	"about_preview_web_pocket": "Pocket&nbsp;- 6&nbsp;pages&nbsp;visibles",
+	"about_preview_mobile_br": "BiteReads&nbsp;- 10+&nbsp;pages&nbsp;visibles",
+	"about_preview_mobile_pocket": "Pocket&nbsp;- 1.5&nbsp;pages&nbsp;visibles",
+}

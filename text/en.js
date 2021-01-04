@@ -6,7 +6,7 @@ var texts = {
 	"action_delete": "Delete",
 	
 	"dialog_delete": "Are you sure you want to delete this entry?",
-	"dialog_add_url": "Enter the URL of a page to add",
+	"dialog_add_url": "Enter the URL of a page to add.",
 
 	"about_opening": "BiteReads, a more compact view for your <a href=\"https://getpocket.com\">Pocket</a> notes!",
 	"about_summary": "All the standard functionality, in a smaller package, to view more of your stories at a glance.",
