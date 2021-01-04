@@ -142,8 +142,19 @@ function getAboutActions() {
 
 //Detect the user's language and load the text
 function setLanguage() {
-	let lang = "fr";
+	//Determine the user's base language
+	let lang = navigator.language || navigator.userLanguage;
 
+	//Remove regional variants
+	if (lang.indexOf("-") > 0)
+		lang = lang.substring(0, lang.indexOf("-"));
+	
+	//Fallback to English if match not found
+	if (lang.length == 0 || lang == "undefined")
+		lang = "en";
+	if (lang != "fr")
+		lang = "en";
+	
 	//Load the texts file
 	fetch("text/" + lang + ".json")
 		.then(function(data) {
