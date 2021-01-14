@@ -10,8 +10,9 @@
 	"dialog_external_url": "Le lien que vous essayez d'accéder va vous mener à l'extérieur de l'application. Voulez-vous continuer?",
 
 	"about_opening": "BiteReads, une interface plus compacte pour vos notes <a href=\"javascript:confirmExternal('https://getpocket.com')\" class=\"external\">Pocket</a>!",
-	"about_summary": "Toute la fonctionnalité standard, dans un ensemble plus compact, pour voir plus de vos notes d'un seul coup d'oeil.",
+	"about_summary": "Toute la fonctionnalité standard*, dans un ensemble plus compact, pour voir plus de vos notes d'un seul coup d'oeil.",
 	"about_bulletpoints": "&rarr; Pas d'inscription, seulement une connexion!<br />&rarr; Installez ou utilisez depuis votre navigateur!<br />&rarr; Léger et rapide!<br />",
+	"about_no_premium": "* Les bonus de Pocket Premium ne sont pas supportés.",
 
 	"about_view_notes": "Voir vos notes",
 	"about_login_pocket": "Connexion à Pocket",

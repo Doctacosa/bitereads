@@ -232,6 +232,12 @@ body {
 }
 
 
+.disclaimer {
+	font-size: 80%;
+	opacity: 0.9;
+}
+
+
 #image_viewer {
 	position: fixed;
 	left: 50%;
