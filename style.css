@@ -8,6 +8,15 @@ a:hover {
 	filter: brightness(120%);
 }
 
+a.external {
+	background-image: url("images/glyphicons-basic-152-square-new-window.svg");
+	background-position: right;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	padding-right: 23px;
+	color: #A86;
+}
+
 article {
 	border-bottom: 1px dotted #AAA;
 	display: grid;

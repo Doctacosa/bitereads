@@ -140,6 +140,13 @@ function getAboutActions() {
 }
 
 
+//Display a warning before trying to access external URLs
+function confirmExternal(url) {
+	if (confirm(getText('dialog_external_url')))
+		window.open(url, "_blank");
+}
+
+
 //Detect the user's language and load the text
 function setLanguage() {
 	//Determine the user's base language

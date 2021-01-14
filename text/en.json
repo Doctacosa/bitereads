@@ -7,8 +7,9 @@
 	
 	"dialog_delete": "Are you sure you want to delete this entry?",
 	"dialog_add_url": "Enter the URL of a page to add.",
+	"dialog_external_url": "The link that you're trying to access will lead you outside of the application. Do you want to continue?",
 
-	"about_opening": "BiteReads, a more compact view for your <a href=\"https://getpocket.com\">Pocket</a> notes!",
+	"about_opening": "BiteReads, a more compact view for your <a href=\"javascript:confirmExternal('https://getpocket.com')\" class=\"external\">Pocket</a> notes!",
 	"about_summary": "All the standard functionality, in a smaller package, to view more of your stories at a glance.",
 	"about_bulletpoints": "&rarr; No registration, login and go!<br />&rarr; Install or use from your browser!<br />&rarr; Quick and light!<br />",
 
