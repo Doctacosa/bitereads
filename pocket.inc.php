@@ -203,7 +203,7 @@ class Pocket {
 
 	public function setUsername($value) {
 		$this->username = $value;
-		$_SESSION['username'] = $username;
+		$_SESSION['username'] = $this->username;
 	}
 
 	public function getUsername() {
