@@ -119,6 +119,7 @@ function logout() {
 	fetch('api.php?action=logout')
 		.then(function(data) {
 			data.json().then(res => {
+				location.reload();
 				if (target)	target.classList.remove('loading');
 			});
 		})
