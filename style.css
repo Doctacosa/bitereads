@@ -186,13 +186,22 @@ body {
 }
 
 #footer {
+	display: flex;
+	justify-content: space-between;
 	margin-top: 30px;
 	background-color: #DDD;
-	text-align: right;
 	font-size: 80%;
 	color: #0009;
 	padding: 10px;
 	line-height: 1.5;
+}
+
+#footer .copyright {
+	text-align: left;
+}
+
+#footer .terms {
+	text-align: right;
 }
 
 .actions {
