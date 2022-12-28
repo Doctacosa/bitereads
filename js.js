@@ -19,6 +19,8 @@ function getList() {
 							article.title = article.title.substring(0, 75) + '...';
 						else if (!article.title || article.title.length == 0)
 							article.title = '(No title)';
+						article.title = article.title.replace('<', '&lt;');
+						article.title = article.title.replace('>', '&gt;');
 						articles += '' + 
 							'<article id="item_' + article.id + '" style="' + article.image + '">' +
 							'	<img src="https://www.interordi.com/tools/favicon/get/' + article.domain + '" alt="" onerror="this.src=\'images/empty.png\'" class="small" />' +
