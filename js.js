@@ -15,9 +15,9 @@ function getList() {
 					articles = '';
 					for (var i in res) {
 						var article = res[i];
-						if (article.title.length > 80)
+						if (article.title && article.title.length > 80)
 							article.title = article.title.substring(0, 75) + '...';
-						else if (article.title.length == 0)
+						else if (!article.title || article.title.length == 0)
 							article.title = '(No title)';
 						articles += '' + 
 							'<article id="item_' + article.id + '" style="' + article.image + '">' +
