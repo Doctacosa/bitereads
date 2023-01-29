@@ -9,6 +9,8 @@
 	"dialog_add_url": "Entrez l'adresse d'une page à ajouter.",
 	"dialog_external_url": "Le lien que vous essayez d'accéder va vous mener à l'extérieur de l'application. Voulez-vous continuer?",
 
+	"page_no_title": "Pas de titre",
+
 	"about_opening": "BiteReads, une interface plus compacte pour vos notes <a href=\"javascript:confirmExternal('https://getpocket.com')\" class=\"external\">Pocket</a>!",
 	"about_summary": "Toute la fonctionnalité standard, dans un ensemble plus compact, pour voir plus de vos notes d'un seul coup d’œil. Sauvegardez des articles intéressants, lisez-les à votre convenance, puis supprimez le marque-page pour libérer votre liste.",
 	"about_bulletpoints": "&rarr; Pas d'inscription, seulement une connexion!<br />&rarr; Installez ou utilisez depuis votre navigateur!<br />&rarr; Léger et rapide!<br />",

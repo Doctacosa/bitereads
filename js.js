@@ -18,7 +18,7 @@ function getList() {
 						if (article.title && article.title.length > 80)
 							article.title = article.title.substring(0, 75) + '...';
 						else if (!article.title || article.title.length == 0)
-							article.title = '(No title)';
+							article.title = '(' + getText('page_no_title') + ')';
 						article.title = article.title.replace('<', '&lt;');
 						article.title = article.title.replace('>', '&gt;');
 						articles += '' + 
