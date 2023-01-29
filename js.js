@@ -75,6 +75,12 @@ function addAction() {
 	if (url == null || url == '')
 		return;
 
+	saveUrl(url);
+}
+
+
+//Save the given URL
+function saveUrl(url) {
 	var target = document.getElementById('content');
 	if (target)	target.classList.add('loading');
 	fetch('api.php?action=add&url=' + url)

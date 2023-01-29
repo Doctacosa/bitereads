@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookmark - BiteReads</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="description" content="Bookmark a page in BiteMarks.">
+	<meta name="theme-color" content="#000000">
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+	<link rel="Shortcut Icon" href="favicon.ico" />
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+
+	<link rel="manifest" href="/manifest.json">
+
+	<style>
+		@import "//www.interordi.com/files/css/normalize.css";
+		@import "//www.interordi.com/files/css/base.css";
+		@import "style.css";
+	</style>
+
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+
+	<script src="pwa.js"></script>
+	<script src="pwabuilder-sw.js"></script>
+	<script src="js.js"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+
+<div id="image_viewer" onclick="closeImage()"><img src="images/empty.png" alt="Image" /></div>
+
+<div id="header">
+	<a href="index.html">
+		<img src="images/logo.svg" alt="" class="logo" />
+		<h1>BiteReads</h1>
+		<h2 class="loc">tagline</h2>
+	</a>
+	<!--span id="username"></span!-->
+	<div class="toolbar">
+		<img src="images/glyphicons-basic-302-square-download.svg" alt="Install app" onclick="install()" id="install" class="button" />
+		<!--img src="images/glyphicons-basic-841-square-plus.svg" alt="Add" onclick="addAction()" class="button" />
+		<img src="images/glyphicons-basic-86-reload.svg" alt="Reload" onclick="window.location.reload()" class="button" />
+		<img src="images/glyphicons-basic-432-log-out.svg" alt="Logout" onclick="logout()" class="button" /-->
+	</div>
+</div>
+
+<div id="test_hello">HELLO</div>
+<div id="test_url">URL</div>
+<div id="test_title">TITLE</div>
+<div id="test_text">TEXT</div>
+<div id="test_page">PAGE</div>
+
+<script>
+	console.log('Hello!');
+	document.getElementById('test_hello').innerText = 'Hello!';
+</script>
+
+<h1>Saving page...</h1>
+
+<script>
+	setLanguage();
+</script>
+
+
+<!-- Matomo -->
+<script>
+	var _paq = window._paq = window._paq || [];
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function() {
+		var u="//apps.interordi.com/matomo/";
+		_paq.push(['setTrackerUrl', u+'matomo.php']);
+		_paq.push(['setSiteId', '11']);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	})();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>
