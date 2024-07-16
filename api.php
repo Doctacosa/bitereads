@@ -94,7 +94,7 @@ elseif ($action == 'auth') {
 		if ($item_data['word_count'] > 0)
 			$details[] = $item_data['word_count'].' words';
 
-		$articles[] = [
+		$articles[$item_data['time_added']] = [
 			'id' => $item_data['item_id'],
 			'image' => $image,
 			'domain' => parse_url($item_data['given_url'], PHP_URL_HOST),
@@ -104,5 +104,7 @@ elseif ($action == 'auth') {
 		];
 	}
 
-	echo json_encode($articles);
+	krsort($articles);
+
+	echo json_encode(array_values($articles));
 }

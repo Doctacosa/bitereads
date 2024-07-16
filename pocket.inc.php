@@ -80,6 +80,8 @@ class Pocket {
 			'consumer_key' => $this->consumer_key,
 			'access_token' => $this->access_token,
 			'detailType' => 'complete',
+			'state' => 'unread',
+			'sort' => 'newest',
 			'count' => '30',
 			'offset' => $start_at,
 		];
