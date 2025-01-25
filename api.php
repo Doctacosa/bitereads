@@ -56,7 +56,7 @@ elseif ($action == 'auth') {
 } else {
 	$get_raw = $pocket->get($start_at);
 	$full_data = json_decode($get_raw, true);
-	if ($full_data == null) {
+	if ($full_data == null || !empty($full_data['error'])) {
 		echo json_encode(['result' => 'must_login']);
 		die();
 	}
