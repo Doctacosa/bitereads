@@ -28,5 +28,7 @@
 	"about_preview_mobile_pocket": "Pocket&nbsp;- 1.5&nbsp;pages&nbsp;visibles",
 
 	"footer_privacy": "Politique de confidentialité",
-	"footer_terms": "Conditions d'utilisation"
+	"footer_terms": "Conditions d'utilisation",
+
+	"deprecated": "<a href=\"https://support.mozilla.org/en-US/kb/future-of-pocket\">Mozilla planifie la fermeture de Pocket le 8 juillet 2025</a>, ce qui va rendre BiteReads inutilisable au même moment. Veuillez exporter vos données si vous désirez les conserver. Merci d'utiliser BiteReads!"
 }
